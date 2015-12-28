@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/ch.accountmaker"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.rey.material.widget.TextView
+        android:id="@+id/item_info"
+        style="@style/Material.Drawable.Ripple.Wave.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:text="Info"
+        android:textColor="#FF000000"
+        android:textSize="@dimen/txt_size_24" />
+
+    <com.rey.material.widget.EditText
+        android:id="@+id/item_add_content"
+        style="@style/Material.Widget.EditText.Label.Light"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dip_3"
+        android:hint="产品数量"
+        android:textSize="@dimen/txt_size_20"
+        digits="1234567890 "
+        app:et_supportMode="none" />
+
+    
+    
+</LinearLayout>

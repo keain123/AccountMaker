@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.handmark.pulltorefresh.library.PullToRefreshScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pull_refresh_scrollview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    ptr:ptrAnimationStyle="flip"
+    ptr:ptrMode="both" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <com.rey.material.widget.Spinner
+                android:id="@+id/customer"
+                style="@style/Material.Widget.Spinner.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/dip_15"
+                android:minWidth="40dp"
+                android:textSize="@dimen/txt_size_24"
+                app:rd_delayClick="none"
+                app:rd_enable="true"
+                app:rd_style="@style/Material.Drawable.Ripple.Wave.Light"
+                app:spn_arrowAnimDuration="@android:integer/config_shortAnimTime"
+                app:spn_arrowInterpolator="@android:anim/decelerate_interpolator"
+                app:spn_arrowSwitchMode="true"
+                app:spn_label="客户"
+                app:spn_labelEnable="false" />
+
+            <com.rey.material.widget.TextView
+                android:id="@+id/begin_time"
+                style="@style/Material.Drawable.Ripple.Wave.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:padding="@dimen/dip_10"
+                android:text="起始时间"
+                android:textColor="#FF000000"
+                android:textSize="@dimen/txt_size_24" />
+
+            <com.rey.material.widget.TextView
+                android:id="@+id/time_sperator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="-"
+                android:textColor="#FF000000"
+                android:textSize="@dimen/txt_size_24" />
+
+            <com.rey.material.widget.TextView
+                android:id="@+id/end_time"
+                style="@style/Material.Drawable.Ripple.Wave.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:padding="@dimen/dip_10"
+                android:text="结束时间"
+                android:textColor="#FF000000"
+                android:textSize="@dimen/txt_size_24" />
+        </LinearLayout>
+
+        <com.rey.material.widget.NoScrollListView
+            android:id="@+id/items"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:attr/windowBackground"
+            android:choiceMode="singleChoice"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent" />
+    </LinearLayout>
+
+</com.handmark.pulltorefresh.library.PullToRefreshScrollView>

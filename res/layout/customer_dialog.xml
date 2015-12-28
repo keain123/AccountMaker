@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:padding="16dp" >
+
+    <com.rey.material.widget.EditText
+        android:id="@+id/customer_name"
+        style="@style/Material.Widget.EditText.Label.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dip_3"
+        android:layout_weight="2"
+        android:hint="名称"
+        app:et_supportMode="none" />
+
+    <com.rey.material.widget.EditText
+        android:id="@+id/customer_qq"
+        style="@style/Material.Widget.EditText.Label.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dip_3"
+        android:layout_weight="2"
+        android:hint="QQ"
+        app:et_supportMode="none" />
+
+    <com.rey.material.widget.EditText
+        android:id="@+id/customer_email"
+        style="@style/Material.Widget.EditText.Label.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dip_3"
+        android:layout_weight="2"
+        android:hint="邮箱"
+        app:et_supportMode="none" />
+
+</LinearLayout>

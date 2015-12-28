@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<litepal>  
+    <dbname value="account_db" ></dbname>  
+  
+    <version value="13" ></version>  
+  
+    <list>  
+        <mapping class="ch.accountmaker.model.Document"></mapping>  
+        <mapping class="ch.accountmaker.model.DocumentItemDetail"></mapping>  
+        <mapping class="ch.accountmaker.model.Item"></mapping>  
+        <mapping class="ch.accountmaker.model.Customer"></mapping>  
+        <mapping class="ch.accountmaker.model.Material"></mapping>  
+        <mapping class="ch.accountmaker.model.TimeStamp"></mapping>  
+    </list>  
+</litepal> 

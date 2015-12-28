@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_dl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary" >
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/main_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="?attr/colorPrimary"
+                    android:minHeight="?attr/actionBarSize"
+                    app:theme="@style/AppBar" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_toLeftOf="@+id/search"
+                    android:layout_toRightOf="@+id/main_toolbar" >
+
+                    <com.rey.material.widget.TabPageIndicator
+                        android:id="@+id/main_tpi"
+                        style="@style/TabPageIndicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="?attr/colorPrimary"
+                        android:clipToPadding="false"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/item_search_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dip_5"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:gravity="right" >
+
+                        <com.rey.material.widget.EditText
+                            android:id="@+id/item_search"
+                            style="@style/Material.Widget.EditText.Label.Light"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:layout_margin="@dimen/dip_3"
+                            android:hint="产品名称"
+                            android:text="1123123"
+                            app:et_supportMode="none" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/doc_search_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dip_5"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <com.rey.material.widget.Spinner
+                            android:id="@+id/doc_search_customer"
+                            style="@style/Material.Widget.Spinner.Light"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dip_15"
+                            android:layout_weight="4"
+                            android:minWidth="128dp"
+                            app:rd_delayClick="none"
+                            app:rd_enable="true"
+                            app:rd_style="@style/Material.Drawable.Ripple.Wave.Light"
+                            app:spn_arrowAnimDuration="@android:integer/config_shortAnimTime"
+                            app:spn_arrowInterpolator="@android:anim/decelerate_interpolator"
+                            app:spn_arrowSwitchMode="true"
+                            app:spn_label="客户"
+                            app:spn_labelEnable="true" />
+
+                        <com.rey.material.widget.EditText
+                            android:id="@+id/doc_search_year"
+                            style="@style/Material.Widget.EditText.Label.Light"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/dip_3"
+                            android:layout_weight="2"
+                            android:hint="年"
+                            app:et_supportMode="none" />
+
+                        <com.rey.material.widget.EditText
+                            android:id="@+id/doc_search_month"
+                            style="@style/Material.Widget.EditText.Label.Light"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/dip_3"
+                            android:layout_weight="2"
+                            android:hint="月"
+                            app:et_supportMode="none" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <com.rey.material.widget.ImageButton
+                    android:id="@+id/search"
+                    style="@style/FlatWaveButtonRippleStyle"
+                    android:layout_width="@dimen/dip_40"
+                    android:layout_height="@dimen/dip_40"
+                    android:layout_margin="@dimen/dip_10"
+                    android:src="@drawable/md_ic_search_white"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+                    android:textColor="#FF000000" 
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <com.rey.material.widget.CustomViewPager
+                android:id="@+id/main_vp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <com.rey.material.widget.SnackBar
+            android:id="@+id/main_sn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/main_fl_drawer"
+        android:layout_width="@dimen/dip_240"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:paddingTop="?attr/actionBarSize" >
+
+        <com.rey.material.widget.ListView
+            android:id="@+id/main_lv_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:attr/windowBackground"
+            android:choiceMode="singleChoice"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent" />
+    </FrameLayout>
+
+</android.support.v4.widget.DrawerLayout>

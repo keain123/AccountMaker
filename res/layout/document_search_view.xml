@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dip_20"
+    app:cardBackgroundColor="#ffffff"
+    app:cardCornerRadius="2dp"
+    app:cardUseCompatPadding="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dip_5"
+        android:orientation="horizontal" >
+
+        <com.rey.material.widget.Spinner
+            android:id="@+id/doc_new_sp"
+            style="@style/Material.Widget.Spinner.Light"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dip_15"
+            android:layout_weight="4"
+            android:minWidth="128dp"
+            app:rd_delayClick="none"
+            app:rd_enable="true"
+            app:rd_style="@style/Material.Drawable.Ripple.Wave.Light"
+            app:spn_arrowAnimDuration="@android:integer/config_shortAnimTime"
+            app:spn_arrowInterpolator="@android:anim/decelerate_interpolator"
+            app:spn_arrowSwitchMode="true"
+            app:spn_label="客户"
+            app:spn_labelEnable="true" />
+
+        <com.rey.material.widget.EditText
+            android:id="@+id/doc_year_search"
+            style="@style/Material.Widget.EditText.Label.Light"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dip_3"
+            android:layout_weight="2"
+            android:hint="年"
+            app:et_supportMode="none" />
+
+        <com.rey.material.widget.EditText
+            android:id="@+id/doc_month_search"
+            style="@style/Material.Widget.EditText.Label.Light"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dip_3"
+            android:layout_weight="2"
+            android:hint="月"
+            app:et_supportMode="none" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

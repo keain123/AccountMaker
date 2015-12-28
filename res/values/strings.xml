@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AccountMaker</string>
+    <string name="hello_world">Hello world!</string>
+
+    
+    <string name="alert_dialog_title">选择时间</string>
+    <string name="positive_button_text">确定</string>
+    <string name="negative_button_text">取消</string>
+
+    <string name="document_category">文档列表</string>
+    <string name="document_category_grid">客户文档列表</string>
+    <string name="item_modify">产品信息</string>
+    <string name="add_new_customer">添加新客户</string>
+    
+    <!-- EventBus action -->
+    <string name="open_doc">open_doc</string>
+    <string name="add_doc">add_doc</string>
+    <string name="refresh_category">refresh_category</string>
+    
+    
+</resources>

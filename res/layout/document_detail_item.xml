@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dip_20"
+    app:cardBackgroundColor="#ffffff"
+    app:cardCornerRadius="2dp"
+    app:cardUseCompatPadding="true" >
+<RelativeLayout 
+    
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:minHeight="@dimen/dip_30">
+
+    <com.rey.material.widget.TextView
+        android:id="@+id/doc_item_no"
+        style="@style/Material.Drawable.Ripple.Wave.Light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/dip_3"
+        android:text="1."
+        android:textColor="#FF000000"
+        android:textSize="@dimen/txt_size_18" 
+        android:minHeight="@dimen/dip_30"/>
+    
+    
+
+    <com.rey.material.widget.TextView
+        android:id="@+id/doc_item_name"
+        style="@style/Material.Drawable.Ripple.Wave.Light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/doc_item_no"
+        android:hint="请输入名称"
+        android:padding="@dimen/dip_3"
+        android:text="#123XXX(明):"
+        android:textColor="#FF000000"
+        android:textSize="@dimen/txt_size_18" 
+        android:minHeight="@dimen/dip_30"/>
+
+    <com.rey.material.widget.EditText
+        android:id="@+id/doc_item_content"
+        style="@style/Material.Drawable.Ripple.Wave.Light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/doc_item_calculate"
+        android:layout_toRightOf="@+id/doc_item_name"
+        android:padding="@dimen/dip_3"
+        android:text="123 445 332 123 123 123"
+        android:textColor="#FF000000"
+        android:textSize="@dimen/txt_size_18"
+        app:et_autoCompleteMode="none"
+        android:minHeight="@dimen/dip_30" />
+
+
+    <com.rey.material.widget.EditText
+        android:id="@+id/doc_item_result"
+        style="@style/Material.Drawable.Ripple.Wave.Light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/doc_item_content"
+        android:layout_toLeftOf="@+id/doc_item_calculate"
+        android:padding="@dimen/dip_3"
+        android:text="result"
+        android:textColor="#FF000000"
+        android:textSize="@dimen/txt_size_18"
+        app:et_autoCompleteMode="none"
+        android:minHeight="@dimen/dip_30" />
+     <com.rey.material.widget.FloatingActionButton
+                style="@style/FloatingColorActionButton"
+                android:id="@+id/doc_item_add"
+                android:layout_width="@dimen/dip_30"
+                android:layout_height="@dimen/dip_30" 
+                android:layout_alignBottom="@+id/doc_item_content"
+                android:layout_alignParentRight="true"
+                android:minHeight="@dimen/dip_30"/>
+    <com.rey.material.widget.FloatingActionButton
+                style="@style/FloatingColorActionButton"
+                android:id="@+id/doc_item_calculate"
+                android:layout_width="@dimen/dip_30"
+                android:layout_height="@dimen/dip_30" 
+                android:layout_below="@+id/doc_item_content"
+                android:layout_alignParentRight="true"
+                android:minHeight="@dimen/dip_30"/>
+   
+
+</RelativeLayout>
+</android.support.v7.widget.CardView>

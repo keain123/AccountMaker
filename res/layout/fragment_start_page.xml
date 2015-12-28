@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+    <com.rey.material.widget.TextView
+        android:id="@+id/add_document"
+        style="@style/Material.Drawable.Ripple.Wave.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/add_doc"
+        android:drawablePadding="@dimen/dip_5"
+        android:padding="@dimen/dip_10"
+        android:text="添加文档"
+        android:textColor="#FF000000"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/txt_size_24" />
+
+    <com.rey.material.widget.TextView
+        android:id="@+id/open_document"
+        style="@style/Material.Drawable.Ripple.Wave.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/open_doc"
+        android:drawablePadding="@dimen/dip_5"
+        android:padding="@dimen/dip_10"
+        android:text="打开文档"
+        android:textColor="#FF000000"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/txt_size_24" />
+    
+    <com.rey.material.widget.TextView
+        style="@style/Material.Drawable.Ripple.Wave.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/dip_5"
+        android:padding="@dimen/dip_10"
+        android:text="最近打开文档"
+        android:textColor="#66000000"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/txt_size_20" 
+        android:layout_marginTop="@dimen/dip_10"/>
+    
+
+    <com.rey.material.widget.ListView
+        android:id="@+id/recent_documents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/windowBackground"
+        android:choiceMode="singleChoice"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent" />
+   
+
+</LinearLayout>
